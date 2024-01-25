@@ -8,7 +8,7 @@ const PORT = 5000
 const jsxEngine = require('jsx-view-engine')
 app.engine('jsx', jsxEngine())
 
-// const mongoConfig = require('./config')
+const mongoConfig = require('./config')
 
 app.get('/', (req, res) => {
     res.send("Hello World")
@@ -17,5 +17,5 @@ app.get('/', (req, res) => {
 
 app.listen(PORT, () => {
     console.log("Listening on port: " + PORT, process.env.MONGO_URL)
-    // mongoConfig()
+    mongoConfig()
 })

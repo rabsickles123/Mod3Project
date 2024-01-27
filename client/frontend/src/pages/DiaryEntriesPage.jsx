@@ -19,7 +19,7 @@ export default function DiaryEntries() {
 
     return(
         <div>
-
+            index of your weather diaries here 
         </div>
     )
 }

@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom'
+import WeatherApp from './WeatherApp'
 
 export default function Navbar() {
     return(
         <header>
-            <div className = "container">
+            <div className = "navcontainer">
                 <Link to="/weather">
                     <h2>The Weather</h2>
                 </Link>

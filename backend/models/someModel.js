@@ -2,11 +2,11 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 
-const someSchema = new Schema({
-    text: { type: String },
-    completed: { type: Boolean}
+const diarySchema = new Schema({
+    title: { type: String, required: true },
+    text: { type: String, required: true },
 })
 
-const Some = mongoose.model('some', someSchema)
+const Diary = mongoose.model('Diary', diarySchema)
 
-module.exports = Some
+module.exports = Diary

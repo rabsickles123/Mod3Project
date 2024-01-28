@@ -4,15 +4,16 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const diaryRoutes = require('./routes/diary')
+const mongoConfig = require('./config')
 
 const PORT = 5000
 
+//middleware
 const jsxEngine = require('jsx-view-engine')
 app.engine('jsx', jsxEngine())
-
-const mongoConfig = require('./config')
-
+app.use(express.json())
 app.use(cors())
+
 
 app.get('/', (req, res) => {
     res.send("Hello World")

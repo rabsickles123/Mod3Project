@@ -12,7 +12,7 @@ export default function Navbar() {
                     <h2>New Diary Entry</h2>
                 </Link>
                 <Link to="/diary">
-                    <h2>Diary</h2>
+                    <h2>View my diary</h2>
                 </Link>
             </div>
         </header>

@@ -20,9 +20,9 @@ export default function DiaryEntries() {
 
     return(
         <div>
-            {diaries && diaries.map((diary) => {
-              <p key ={diary._id}>{diary.title}</p>
-            })}
+            {/* {diaries && diaries.map((diary) => {
+            //   <p key ={diary._id}>{diary.title}</p> */}
+          
         </div>
     )
 }

@@ -3,22 +3,22 @@ const express = require('express')
 const router = express.Router()
 
 // Get all diaries
-router.get('/diary', (req, res) => {
+router.get('/', (req, res) => {
     res.json({mssg: 'Get all diaries'})
 })
 
 // Get a single diary entry
-router.get('/diary/:id', (req, res) => {
+router.get('/:id', (req, res) => {
     res.json({mssg: 'Get a single diary entry'})
 })
 
 // POST a new diary
-router.post('/diary', (req, res) => {
+router.post('/', (req, res) => {
     res.json({mssg: "POST a new diary entry"})
 })
 
 // Delete a diary entry
-router.delete('/diary/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
     res.json({mssg: "Delete a diary entry"})
 })
 

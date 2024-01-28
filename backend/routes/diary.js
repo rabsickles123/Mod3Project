@@ -1,4 +1,5 @@
 const express = require('express')
+const Diary = require('../models/diaryModel')
 
 const router = express.Router()
 
@@ -13,8 +14,15 @@ router.get('/:id', (req, res) => {
 })
 
 // POST a new diary
-router.post('/', (req, res) => {
-    res.json({mssg: "POST a new diary entry"})
+router.post('/', async (req, res) => {
+    const {title, text} = req.body
+
+    try {
+        const diary = await Diary.create({title, text})
+        res.status(200).json(diary)
+    } catch (error) {
+        res.status(400).json({error: error.message})
+    }
 })
 
 // Delete a diary entry

@@ -8,6 +8,7 @@ export default function DiaryEntries() {
           const response = await fetch('/api/test');
           const data = await response.json();
           console.log(data);
+          setDiaries(data)
         } catch (err) {
           console.log(err);
         }
@@ -19,7 +20,9 @@ export default function DiaryEntries() {
 
     return(
         <div>
-            index of your weather diaries here 
+            {diaries && diaries.map((diary) => {
+              <p key ={diary._id}>{diary.title}</p>
+            })}
         </div>
     )
 }

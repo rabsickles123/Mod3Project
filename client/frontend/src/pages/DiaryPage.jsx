@@ -5,7 +5,7 @@ export default function DiaryEntries() {
 
     const getData = async () => {
         try {
-          const response = await fetch('/api/test');
+          const response = await fetch('/api/diary');
           const data = await response.json();
           console.log(data);
           setDiaries(data)
@@ -19,10 +19,12 @@ export default function DiaryEntries() {
       }, []);
 
     return(
-        <div>
-            {/* {diaries && diaries.map((diary) => {
-            //   <p key ={diary._id}>{diary.title}</p> */}
-          
+        <div className = "diary">
+          <div className = "diary-entry">
+            {diaries && diaries.map((diary) => (
+              <p key ={diary._id}><a href = "">{diary.title}</a></p>
+            ))}             
+          </div>
         </div>
     )
 }

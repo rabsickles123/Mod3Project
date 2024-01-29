@@ -8,7 +8,7 @@ const mongoConfig = require('./config')
 
 const PORT = 5000
 
-//middleware
+// middleware
 const jsxEngine = require('jsx-view-engine')
 app.engine('jsx', jsxEngine())
 app.use(express.json())

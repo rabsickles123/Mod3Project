@@ -22,7 +22,7 @@ export default function DiaryEntries() {
         <div className = "diary">
           <div className = "diary-entry">
             {diaries && diaries.map((diary) => (
-              <p key ={diary._id}><a href = "">{diary.title}</a></p>
+              <a key={diary._id} href = {`/diary/${diary._id}`}>{diary.title} </a>
             ))}             
           </div>
         </div>

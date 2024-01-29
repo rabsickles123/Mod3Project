@@ -24,7 +24,7 @@ export default function DiaryEntries() {
         <div className = "diary">
           <div className = "diary-entry">
             {diaries && diaries.map((diary) => (
-             <a key = {diary._id} href="/diary/:id"><DiaryEntryPage diary = {diary}/></a> 
+             <Link key = {diary._id} to={`/diary/${diary._id}`}>{diary.title}</Link> 
             ))}             
           </div>
         </div>

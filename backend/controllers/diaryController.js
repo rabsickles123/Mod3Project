@@ -26,6 +26,7 @@ const getDiaryEntry = async (req, res) => {
 // create a new diary
 const createDiary = async (req, res) => {
     const {title, text} = req.body
+    console.log(req.body, ":reqbody")
 
     // add doc to db
     try {

@@ -6,6 +6,7 @@ import Navbar from './Components/Navbar'
 import WeatherPage from './pages/WeatherPage'
 import DiaryPage from './pages/DiaryPage'
 import NewEntryPage from './pages/NewEntryPage'
+import DiaryEntryPage from './pages/DiaryEntryPage'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Route path = "/weather" element = {<WeatherPage/>}></Route>
         <Route path = "/newentry" element = {<NewEntryPage />}></Route>
         <Route path = "/diary" element = {<DiaryPage/>}></Route>
+        <Route path = "/diary/:id" element = {<DiaryEntryPage />}></Route>
       </Routes>
     </div>
     </>

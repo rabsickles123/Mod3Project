@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import DiaryEntryPage from "./DiaryEntryPage";
 
 export default function DiaryEntries() {
     const [diaries, setDiaries] = useState(null)
@@ -22,7 +24,7 @@ export default function DiaryEntries() {
         <div className = "diary">
           <div className = "diary-entry">
             {diaries && diaries.map((diary) => (
-              <a key={diary._id} href = {`/diary/${diary._id}`}>{diary.title} </a>
+             <a key = {diary._id} href="/diary/:id"><DiaryEntryPage diary = {diary}/></a> 
             ))}             
           </div>
         </div>

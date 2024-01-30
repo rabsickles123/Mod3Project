@@ -1,4 +1,3 @@
-import DiaryEntryPage from "../pages/DiaryEntryPage"
 
 export default function Diarydetails({diary}) {
     return(

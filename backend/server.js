@@ -8,6 +8,8 @@ const authRoutes = require('./routes/authRoutes')
 const userRoutes = require('./routes/userRoutes')
 const mongoConfig = require('./config')
 
+const { authorize } = require('./middleware/authMiddleware')
+
 const PORT = 5000
 
 // middleware

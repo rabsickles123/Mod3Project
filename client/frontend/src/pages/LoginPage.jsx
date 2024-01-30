@@ -8,7 +8,7 @@ let emptyForm = {
     password: ''
 }
 
-export default function LoginLogin({ setUser }) {
+export default function Login({ setUser }) {
 
     const navigate = useNavigate()
 

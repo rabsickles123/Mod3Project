@@ -8,9 +8,10 @@ import WeatherPage from './pages/WeatherPage'
 import DiaryPage from './pages/DiaryPage'
 import NewEntryPage from './pages/NewEntryPage'
 import DiaryEntryPage from './pages/DiaryEntryPage'
-import Login from "./pages/Login";
-import Profile from "./pages/Profile";
-import Register from "./pages/Register";
+import Login from "./pages/LoginPage";
+import Profile from "./pages/ProfilePage";
+import Register from "./pages/RegisterPage";
+
 
 function App() {
   const [user, setUser] = useState({})
@@ -51,7 +52,7 @@ function App() {
 
   return (
     <>
-    <Navbar/>
+    <Navbar username = {user.username} setUser = {setUser}/>
     <div className = "App">
       <Routes>
         <Route path = "/" element = {<Homepage/>}></Route>
@@ -59,7 +60,7 @@ function App() {
         <Route path = "/newentry" element = {<NewEntryPage />}></Route>
         <Route path = "/diary" element = {<DiaryPage/>}></Route>
         <Route path = "/diary/:id" element = {<DiaryEntryPage />}></Route>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Homepage />} />
                 {loggedIn ? 
                     <>
                         <Route path="/profile" element={<Profile username={user.username} email={user.email} />} />

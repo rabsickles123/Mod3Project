@@ -1,6 +1,8 @@
 import { useState } from "react";
+import useDiaryContext  from "../hooks/useDiaryContext"
 
 export default function NewEntry() {
+  const {dispatch} = useDiaryContext()
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
   const [error, setError] = useState("")
@@ -29,6 +31,7 @@ export default function NewEntry() {
       setText('')
       // setError(null)
       console.log('diary entry added', data)
+      dispatch({type: "CREATE_DIARY", payload: data})
     }
   };
 

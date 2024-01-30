@@ -1,16 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import DiaryEntryPage from "./DiaryEntryPage";
+import useDiaryContext from "../hooks/useDiaryContext";
 
 export default function DiaryEntries() {
-    const [diaries, setDiaries] = useState(null)
+    const {diary, dispatch} = useDiaryContext()
 
     const getData = async () => {
         try {
           const response = await fetch('/api/diary');
           const data = await response.json();
           console.log(data);
-          setDiaries(data)
+          dispatch({type: 'SET_DIARY', payload: data })
         } catch (err) {
           console.log(err);
         }
@@ -20,14 +20,14 @@ export default function DiaryEntries() {
         getData();
       }, []);
 
+      console.log("Diary state: ", diary)
+
     return(
         <div className = "diary">
           <div className = "diary-entry">
-            {diaries && diaries.map((diary) => (
-             <Link key = {diary._id} to={`/diary/${diary._id}`}>{diary.title} <br/> <br/> </Link> 
-            
-            ))} 
-                        
+            {diary && diary.map((diaryEntry) => (
+             <Link key = {diaryEntry._id} to={`/diary/${diaryEntry._id}`}>{diaryEntry.title} <br/> <br/> </Link>            
+            ))}                        
           </div>
         </div>
     )

@@ -39,19 +39,12 @@ const createDiary = async (req, res) => {
 
 // delete a diary entry
 const deleteDiaryEntry = async (req, res) => {
-    const {id} = req.params
-
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-        return res.status(404).json({error: "No such diary entry"})
+    try {
+        const diary = await Diary.findByIdAndDelete({ _id: req.params.id })
+        res.json({ message: "Diary successfully deleted"})
+    } catch (err) {
+        res.status(400).json({ error: err.message })
     }
-
-    const diary = await Diary.findOneAndDelete({_id: id})
-
-    if (!diary) {
-        return res.status(404).json({error: 'No such diary entry'})
-    }
-
-    res.status(200).json(diary)
 }
 
 // update a diary
@@ -79,5 +72,4 @@ module.exports = {
     getDiaryEntry,
     deleteDiaryEntry,
     updateDiaryEntry 
-
 }

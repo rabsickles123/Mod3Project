@@ -57,14 +57,15 @@ function App() {
       <Routes>
         <Route path = "/" element = {<Homepage/>}></Route>
         <Route path = "/weather" element = {<WeatherPage/>}></Route>
-        <Route path = "/newentry" element = {<NewEntryPage />}></Route>
-        <Route path = "/diary" element = {<DiaryPage/>}></Route>
-        <Route path = "/diary/:id" element = {<DiaryEntryPage />}></Route>
+       
         <Route path="/" element={<Homepage />} />
                 {loggedIn ? 
                     <>
                         <Route path="/profile" element={<Profile username={user.username} email={user.email} />} />
                         {!isLoading && <Route path="*" element={<Navigate to="/" />} />}
+                        <Route path = "/newentry" element = {<NewEntryPage />}></Route>
+                        <Route path = "/diary" element = {<DiaryPage/>}></Route>
+                        <Route path = "/diary/:id" element = {<DiaryEntryPage />}></Route>
                     </>
                     :
                     <>

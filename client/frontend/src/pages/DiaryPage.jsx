@@ -31,8 +31,17 @@ export default function DiaryEntries() {
         }
     }
 
-
-
+    
+    const handleEdit = async(id) => {
+      try {
+          await fetch(`/api/diary/${id}` , {
+              method: 'DELETE'
+          })
+          setDiary(diary.filter((d) => d._id !==id))
+      } catch (err) {
+          console.log(err.message)
+      }
+  }
 
     return(
         <div className = "diary">
@@ -47,10 +56,7 @@ export default function DiaryEntries() {
                 <button onClick = {()=> handleEdit(diaryEntry._id)}>Edit</button>
                 <br/><br/>
               </div>                        
-            ))} 
-            
-            
-                                  
+            ))}                              
           </div>
         </div>
     )

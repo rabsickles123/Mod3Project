@@ -1,4 +1,5 @@
 import axios from 'axios'
+import "./LoginPage.css"
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -51,8 +52,9 @@ export default function Login({ setUser }) {
     }
 
     return ( 
-        <>
-            <h1>Login</h1>
+        <div className='login'>
+        < div className='container1'>
+            <h1 id = "login title">Login</h1>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="username">Username:</label>
                 <br />
@@ -62,6 +64,7 @@ export default function Login({ setUser }) {
                     name="username"
                     onChange={handleChange}
                     value={form.username}
+                    className= "input-bar1"
                 />
                 <br /><br />
                 <label htmlFor="password">Password:</label>
@@ -72,10 +75,12 @@ export default function Login({ setUser }) {
                     name="password"
                     onChange={handleChange}
                     value={form.password}
+                    className="input-bar1"
                 />
                 <br /><br />
-                <button>Submit</button>
+                <button className = "login-submit-button">Submit</button>
             </form>
-        </>
+        </div>
+        </div>
      );
 }

@@ -1,0 +1,58 @@
+.register {
+    text-align: center;
+    width: 600px;
+    height: 600px;
+    margin: 100px auto 20px;
+    border-radius: 10px;
+    background-image: linear-gradient(135deg, #4ab8e4, #a19cbe);
+    color: whitesmoke;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .input-bar2 {
+    display: block; 
+    margin: 0 auto; 
+    padding: 10px; 
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 80%;
+  }
+  
+  .register-input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 80%;
+  }
+  
+  .register-submit-button {
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: black;
+    border: 2px solid white;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+  }
+  
+  .register-submit-button:hover {
+    background-color: #333; 
+  }
+
+  label {
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+  }

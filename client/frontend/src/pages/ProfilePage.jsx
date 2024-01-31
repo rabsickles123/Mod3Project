@@ -1,9 +1,13 @@
+import "./ProfilePage.css"
+
 export default function Profile({ username, email }) {
     return ( 
-        <div>
-            <h1>Profile</h1>
-            <p>username: {username}</p>
-            <p>email: {email}</p>
+        <div className="profile-container">
+            <div>
+            <h1 className = "profile-title">Profile</h1>
+            <p className = "username">username: {username}</p>
+            <p className = "email">email: {email}</p>
+            </div>
         </div>
         
      );

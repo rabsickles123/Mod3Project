@@ -1,4 +1,5 @@
 import axios from "axios";
+import "./RegisterPage.css"
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -52,8 +53,9 @@ export default function Register({ setUser }) {
     }
 
     return ( 
-        <>
-            <h1>Register</h1>
+        <div className = "register">
+            <div className = "register-container">
+            <h1 className = "register-title">Register</h1>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="username">Username:</label>
                 <br />
@@ -63,6 +65,7 @@ export default function Register({ setUser }) {
                     name="username"
                     onChange={handleChange}
                     value={form.username}
+                    className= "input-bar2"
                 />
                 <br /><br />
                 <label htmlFor="email">Email:</label>
@@ -73,6 +76,7 @@ export default function Register({ setUser }) {
                     name="email"
                     onChange={handleChange}
                     value={form.email}
+                    className="input-bar2"
                 />
                 <br /><br />
                 <label htmlFor="password">Password:</label>
@@ -83,10 +87,12 @@ export default function Register({ setUser }) {
                     name="password"
                     onChange={handleChange}
                     value={form.password}
+                    className="input-bar2"
                 />
                 <br /><br />
-                <button>Submit</button>
+                <button className= "register-submit-button">Submit</button>
             </form>
-        </>
+            </div>
+        </div>
      );
 }

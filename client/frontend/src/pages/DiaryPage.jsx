@@ -32,16 +32,19 @@ export default function DiaryEntries() {
     }
 
     
-    const handleEdit = async(id) => {
-      try {
-          await fetch(`/api/diary/${id}` , {
-              method: 'DELETE'
-          })
-          setDiary(diary.filter((d) => d._id !==id))
-      } catch (err) {
-          console.log(err.message)
-      }
-  }
+      // const handleEdit = async (id) => {
+      //   try {
+      //     // Fetch the current diary entry data
+      //     const response = await fetch(`/api/diary/${id}`);
+      //     const data = await response.json();
+      
+      //     // Redirect to the edit page with the current data
+      //     navigate(`/diary/${id}/edit`, { state: { data } });
+      //   } catch (err) {
+      //     console.log(err.message);
+      //   }
+      // };
+    
 
     return(
         <div className = "diary">
@@ -53,7 +56,7 @@ export default function DiaryEntries() {
                 <Link to={`/diary/${diaryEntry._id}`}>{diaryEntry.title}</Link>
                 <br/><br/>
                 <button onClick = {()=> handleDelete(diaryEntry._id)}> Delete</button>
-                <button onClick = {()=> handleEdit(diaryEntry._id)}>Edit</button>
+                <button onClick = {()=> navigate(`/diary/${diaryEntry._id}/edit`)}>Edit</button>
                 <br/><br/>
               </div>                        
             ))}                              

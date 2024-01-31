@@ -30,6 +30,7 @@ const createDiary = async (req, res) => {
 
     // add doc to db
     try {
+        // const user_id = req.user._id
         const diary = await Diary.create({title, text})
         res.status(200).json(diary)
     } catch (error) {
@@ -48,22 +49,42 @@ const deleteDiaryEntry = async (req, res) => {
 }
 
 // update a diary
-const updateDiaryEntry = async (req, res) => {
-    const {id} = req.params
+// const updateDiaryEntry = async (req, res) => {
+//     const {id} = req.params
 
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-        return res.status(404).json({error: "No such diary entry"})
-    }
+//     if (!mongoose.Types.ObjectId.isValid(id)) {
+//         return res.status(404).json({error: "No such diary entry"})
+//     }
 
-    const diary = await Diary.findOneAndUpdate({_id: id}, {
-        ...req.body
-    })
+//     const diary = await Diary.findOneAndUpdate({_id: id}, {
+//         ...req.body
+//     })
     
-    if (!diary) {
-        return res.status(404).json({error: 'No such diary entry'})
-    }
+//     if (!diary) {
+//         return res.status(404).json({error: 'No such diary entry'})
+//     }
 
-    res.status(200).json(diary)
+//     res.status(200).json(diary)
+// }
+
+// Update Diary Entry
+const updateDiaryEntry = async (req, res) => {
+    try {
+        const diary = await Diary.findByIdAndUpdate(req.params.id, req.body)
+        res.json({mssg: "Diary UPDATED!", diary})
+    } catch(err) {
+        res.status(400).json({error: err.message})
+    }
+}
+
+// Edit Diary Entry 
+const editDiary = async (req,res) => {
+    try {
+        const diary = await Diary.findById({ _id: req.params.id })
+        res.status(400).json(diary)
+    } catch (err) {
+        res.status(400).json({ error: err.message })
+    }
 }
 
 module.exports = {
@@ -71,5 +92,6 @@ module.exports = {
     createDiary,
     getDiaryEntry,
     deleteDiaryEntry,
-    updateDiaryEntry 
+    updateDiaryEntry,
+    editDiary
 }

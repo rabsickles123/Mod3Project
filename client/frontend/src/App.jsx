@@ -11,6 +11,7 @@ import DiaryEntryPage from './pages/DiaryEntryPage'
 import Login from "./pages/LoginPage";
 import Profile from "./pages/ProfilePage";
 import Register from "./pages/RegisterPage";
+import DiaryEntryEditPage from './pages/DiaryEntryEditPage'
 
 
 function App() {
@@ -66,6 +67,7 @@ function App() {
                         <Route path = "/newentry" element = {<NewEntryPage />}></Route>
                         <Route path = "/diary" element = {<DiaryPage/>}></Route>
                         <Route path = "/diary/:id" element = {<DiaryEntryPage />}></Route>
+                        <Route path = "/diary/:id/edit" element = {<DiaryEntryEditPage/>}></Route>
                     </>
                     :
                     <>

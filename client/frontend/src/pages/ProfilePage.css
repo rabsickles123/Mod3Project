@@ -10,3 +10,11 @@
       "Lucida Sans", Arial, sans-serif;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
 }
+
+.profile-title {
+    height: 300px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+}

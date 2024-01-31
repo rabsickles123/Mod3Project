@@ -27,7 +27,7 @@ export default function NewEntry() {
     if (response.ok) {
       setTitle('')
       setText('')
-      // setError(null)
+      setError(null)
       console.log('diary entry added', data)
     }
   };

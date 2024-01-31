@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import "./DiaryPage.css"
 
 export default function DiaryEntries() {
     const navigate = useNavigate()
@@ -31,32 +32,17 @@ export default function DiaryEntries() {
         }
     }
 
-    
-      // const handleEdit = async (id) => {
-      //   try {
-      //     // Fetch the current diary entry data
-      //     const response = await fetch(`/api/diary/${id}`);
-      //     const data = await response.json();
-      
-      //     // Redirect to the edit page with the current data
-      //     navigate(`/diary/${id}/edit`, { state: { data } });
-      //   } catch (err) {
-      //     console.log(err.message);
-      //   }
-      // };
-    
-
     return(
         <div className = "diary">
           <h1>Here are all your diary entries!</h1>
-          <div className = "diary-entry" >
+          <div >
             
             {diary && diary.map((diaryEntry) => (
-              <div key = {diaryEntry._id}>
-                <Link to={`/diary/${diaryEntry._id}`}>{diaryEntry.title}</Link>
+              <div className = "diary-entry"  key = {diaryEntry._id}>
+                <Link className="diary-link" to={`/diary/${diaryEntry._id}`}>{diaryEntry.title}</Link>
                 <br/><br/>
-                <button onClick = {()=> handleDelete(diaryEntry._id)}> Delete</button>
-                <button onClick = {()=> navigate(`/diary/${diaryEntry._id}/edit`)}>Edit</button>
+                <button className = "delete-button" onClick = {()=> handleDelete(diaryEntry._id)}> Delete</button>
+                <button className = "edit-button" onClick = {()=> navigate(`/diary/${diaryEntry._id}/edit`)}>Edit</button>
                 <br/><br/>
               </div>                        
             ))}                              

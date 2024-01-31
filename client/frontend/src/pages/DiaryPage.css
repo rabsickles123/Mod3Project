@@ -1,0 +1,56 @@
+.diary {
+    text-align: center;
+    width: 600px;
+    height: 600px;
+    margin: 100px auto 20px;
+    border-radius: 10px;
+    background-image: linear-gradient(135deg, #4ab8e4, #a19cbe);
+    color: whitesmoke;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+.diary-entry {
+    border: 1px solid #4ab8e4;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    background-color: whitesmoke;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-image: linear-gradient(135deg,whitesmoke, #4ab8e4 );
+}
+
+.diary-link {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-style: italic;
+    font-style: italic;
+    color: #007bff; 
+    text-decoration: none;
+}
+
+.diary-link:hover {
+    color: #007bff68;
+}
+
+.delete-button, .edit-button {
+    border-radius: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: black;
+    border-color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+.delete-button:hover {
+    background-color: #333; 
+  }
+
+.edit-button:hover {
+    background-color: #333; 
+}

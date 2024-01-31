@@ -15,7 +15,7 @@ export default function DiaryEntryEditPage() {
             const response = await fetch(`/api/diary/${id}`);
             const data = await response.json();
             
-            // Set the initial state of form fields with data from the API
+            
             setTitle(data.title || '');
             setText(data.text || '');
           } catch (err) {
@@ -23,7 +23,7 @@ export default function DiaryEntryEditPage() {
           }
         };
     
-        fetchData(); // Fetch data when the component mounts
+        fetchData(); 
       }, [id])
 
   const handleSubmit = async (e) => {

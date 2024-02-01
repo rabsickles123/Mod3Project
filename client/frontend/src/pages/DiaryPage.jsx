@@ -39,7 +39,7 @@ export default function DiaryEntries() {
             
             {diary && diary.map((diaryEntry) => (
               <div className = "diary-entry"  key = {diaryEntry._id}>
-                <Link className="diary-link" to={`/diary/${diaryEntry._id}`}>{diaryEntry.title}</Link>
+                <Link className="diary-link" to={`/diary/${diaryEntry._id}`}>{diaryEntry.date}{diaryEntry.title}</Link>
                 <br/><br/>
                 <button className = "delete-button" onClick = {()=> handleDelete(diaryEntry._id)}> Delete</button>
                 <button className = "edit-button" onClick = {()=> navigate(`/diary/${diaryEntry._id}/edit`)}>Edit</button>

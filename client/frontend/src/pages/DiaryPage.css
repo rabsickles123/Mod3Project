@@ -9,7 +9,7 @@
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
-}
+}  
 
 .diary-entry {
     border: 1px solid #4ab8e4;
@@ -19,6 +19,7 @@
     background-color: whitesmoke;
     margin-top: 5px;
     margin-bottom: 5px;
+    margin: 20px;
     background-image: linear-gradient(135deg,whitesmoke, #4ab8e4 );
 }
 
@@ -53,4 +54,8 @@
 
 .edit-button:hover {
     background-color: #333; 
+}
+
+.diary-page-title {
+    padding: 20px;
 }

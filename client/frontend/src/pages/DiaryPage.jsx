@@ -34,7 +34,7 @@ export default function DiaryEntries() {
 
     return(
         <div className = "diary">
-          <h1>Here are all your diary entries!</h1>
+          <h1 className = "diary-page-title">Here are all your diary entries!</h1>
           <div >
             
             {diary && diary.map((diaryEntry) => (

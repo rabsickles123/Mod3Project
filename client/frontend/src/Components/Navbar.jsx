@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import WeatherApp from './WeatherApp'
+import "./Navbar.css"
 
 
 export default function Navbar({username, setUser}) {

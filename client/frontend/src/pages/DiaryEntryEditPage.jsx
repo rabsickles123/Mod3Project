@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 export default function DiaryEntryEditPage() {
     const {id} = useParams()
     const navigate = useNavigate()
-    const [title, setTitle] = useState('');
+    const [title, setTitle] = useState(''); 
     const [text, setText] = useState('');
     const [error, setError] = useState('')
 
@@ -58,16 +58,16 @@ export default function DiaryEntryEditPage() {
   };
 
   return (
-    <div className="newentry">
-      <h1>Update your diary entry!</h1>
-      <form onSubmit={handleSubmit} className = "create-diary-entry">
+    <div className="diary-entry-class">
+      <h1 className="diary-entry-title">Update your diary entry!</h1>
+      <form onSubmit={handleSubmit} className = "create-or-edit-diary-entry">
         <label>Title: </label>
-        <input type= "text" onChange={(e) => setTitle(e.target.value)} value = {title}/>
+        <input className = "input3" type= "text" onChange={(e) => setTitle(e.target.value)} value = {title}/>
         <br/> <br/>
-        <label>What are you thinking?</label>
-        <textarea type= "text" onChange={(e)=> setText(e.target.value)} value = {text}/>
+        <label className="label2">Update your thoughts here: </label>
+          <textarea className="text-area"type= "text" onChange={(e)=> setText(e.target.value)} value = {text}/>
         <br/> <br/>
-        <button>Update Diary</button> 
+        <button className="submit-update-diary-button">Update Diary</button> 
         {error && <div className = "error">{error}</div>} 
       </form>
       

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./DiaryEntry.css"
 
 export default function NewEntry() {
   const [title, setTitle] = useState("");
@@ -33,16 +34,16 @@ export default function NewEntry() {
   };
 
   return (
-    <div className="newentry">
-      <h1>Create a new diary entry!</h1>
-      <form onSubmit={handleSubmit} className = "create-diary-entry">
+    <div className="diary-entry-class">
+      <h1 className="diary-entry-title">Create a new diary entry!</h1>
+      <form onSubmit={handleSubmit} className = "create-or-edit-diary-entry">
         <label>Title: </label>
-        <input type= "text" onChange={(e) => setTitle(e.target.value)} value = {title}/>
+        <input className = "input3" type= "text" onChange={(e) => setTitle(e.target.value)} value = {title}/>
         <br/> <br/>
-        <label>What are you thinking?</label>
-        <textarea type= "text" onChange={(e)=> setText(e.target.value)} value = {text}/>
+        <label className="label2">Thoughts? Feelings? Weather?</label>
+        <textarea className="text-area" type= "text" onChange={(e)=> setText(e.target.value)} value = {text}/>
         <br/> <br/>
-        <button>Submit Diary</button> 
+        <button className="submit-update-diary-button">Submit Diary</button> 
         {error && <div className = "error">{error}</div>} 
       </form>
       

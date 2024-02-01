@@ -1,4 +1,4 @@
-.profile-page {
+.diary-details {
     text-align: center;
     width: 600px;
     height: 600px;
@@ -11,18 +11,11 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
 }
 
-.profile-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+.diary-details-title {
+  padding-top: 20px;
 }
 
-.profile-title {
-  padding: 20px;
-}
-
-.username {
-  padding: 30px;
-  font-size:large;
+.diary-details-text {
+  font-size: x-large;
+  padding: 50px;
 }

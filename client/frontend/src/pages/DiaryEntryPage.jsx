@@ -1,6 +1,7 @@
 import DiaryDetails from "../Components/Diarydetails";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+// import "./Diarydetails.css";
 
 
 export default function DiaryEntryPage() {
@@ -26,6 +27,6 @@ export default function DiaryEntryPage() {
       }, []);
 
     return(
-        <div> <DiaryDetails diary = {diary} /> </div>
+        <div className="diary-details"> <DiaryDetails diary = {diary} /> </div>
     )
 }

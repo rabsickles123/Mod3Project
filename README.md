@@ -21,11 +21,11 @@ ultimately a weather mood tracker.
  
 ## ERD
 ERD done via wireframe.cc
-https://wireframe.cc/kurx97
+- https://wireframe.cc/kurx97
 
 ## Wireframe 
 Wireframing done via wireframe.cc--The UI
-https://wireframe.cc/74E1OD
+- https://wireframe.cc/74E1OD
 
 ## Technologies Used
 - Backend: MongoDB, Express, Node.js

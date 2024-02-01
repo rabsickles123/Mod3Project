@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function NewEntry() {
   const navigate = useNavigate()
-  const [date, setDate] = useState("")
+  // const [date, setDate] = useState("")
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
   const [error, setError] = useState("")
@@ -13,7 +13,7 @@ export default function NewEntry() {
 
     e.preventDefault()
 
-    const diary = { title, text, date }
+    const diary = { title, text }
 
     console.log(diary)
     const response = await fetch('/api/diary/', {
@@ -43,8 +43,6 @@ export default function NewEntry() {
     <div className="diary-entry-class">
       <h1 className="diary-entry-title">Create a new diary entry!</h1>
       <form onSubmit={handleSubmit} className = "create-or-edit-diary-entry">
-      <label>Date: </label>
-        <input className = "input4" type= "date" onChange={(e) => setDate(e.target.value)} value = {date}/>
         <label>Title: </label>
         <input className = "input3" type= "text" onChange={(e) => setTitle(e.target.value)} value = {title}/>
         <br/> <br/>

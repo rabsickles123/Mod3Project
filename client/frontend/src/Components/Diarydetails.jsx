@@ -13,7 +13,6 @@ export default function Diarydetails({diary}) {
     
     return(
         <div className="diary-details">
-            <h2>{diary.date}</h2>
            <h1 className= "diary-details-title">{diary.title}</h1> 
            <div className = "diary-details-text"><p>{diary.text}</p></div> 
            <button onClick= {handleClick} className="Back-button">Back</button>   

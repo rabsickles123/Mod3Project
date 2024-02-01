@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./DiaryPage.css"
+import baseURL from "../Api";
 
 export default function DiaryEntries() {
     const navigate = useNavigate()
@@ -8,7 +9,7 @@ export default function DiaryEntries() {
 
     const getData = async () => {
         try {
-          const response = await fetch('/api/diary');
+          const response = await fetch(baseURL + '/api/diary');
           const data = await response.json();
           // console.log(data);
           setDiary(data)

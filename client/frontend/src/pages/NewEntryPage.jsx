@@ -29,7 +29,7 @@ export default function NewEntry() {
       setError(data.error)
     }
     if (response.ok) {
-      setDate('')
+      
       setTitle('')
       setText('')
       setError(null)
@@ -51,8 +51,7 @@ export default function NewEntry() {
         <br/> <br/>
         <button className="submit-update-diary-button">Submit Diary</button> 
         {error && <div className = "error">{error}</div>} 
-      </form>
-      
+      </form>    
     </div>
   );
 }

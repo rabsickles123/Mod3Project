@@ -23,11 +23,12 @@ export default function Login({ setUser }) {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-
+            
+            console.log("form", form)
             const response = await axios.post('/auth/login', form)
             const token = response.data.token
 
-            // console.log(token)
+            console.log(token)
 
             if (!token) {
                 setForm(emptyForm)

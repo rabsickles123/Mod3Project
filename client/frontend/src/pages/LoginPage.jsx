@@ -29,6 +29,7 @@ export default function Login({ setUser }) {
             const token = response.data.token
 
             console.log(token)
+            console.log(response)
 
             if (!token) {
                 setForm(emptyForm)

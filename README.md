@@ -28,10 +28,10 @@ Wireframing done via wireframe.cc--The UI
 https://wireframe.cc/74E1OD
 
 ## Technologies Used
-Backend: MongoDB, Express, Node.js
-Front-End: React and CSS 
-Postman for testing Backend routes
-API: Openweathermap.org (Geocoding API and One Call API)
+- Backend: MongoDB, Express, Node.js
+- Front-End: React and CSS 
+- Postman for testing Backend routes
+- API: Openweathermap.org (Geocoding API and One Call API)
 
 ## Unsolved Problems
 Individual users are not recognized. All registered users can see and update all diary entries.

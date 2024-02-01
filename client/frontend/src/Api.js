@@ -1,2 +1,2 @@
-const baseURL = import.meta.env.PROD ? import.meta.env.VITE_API : 'https://weatherdiary-backend.onrender.com'
+const baseURL = import.meta.env.VITE_API ? import.meta.env.VITE_API : import.meta.env.VITE_LOCAL
 export default baseURL

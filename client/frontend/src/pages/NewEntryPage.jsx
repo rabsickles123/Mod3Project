@@ -1,7 +1,9 @@
 import { useState } from "react";
 import "./DiaryEntry.css"
+import { useNavigate } from "react-router-dom";
 
 export default function NewEntry() {
+  const navigate = useNavigate()
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
   const [error, setError] = useState("")
@@ -29,7 +31,8 @@ export default function NewEntry() {
       setTitle('')
       setText('')
       setError(null)
-      console.log('diary entry added', data)
+      console.log('diary entry added', data) 
+      navigate('/diary')
     }
   };
 

@@ -52,9 +52,9 @@ function App() {
 
 
   return (
-    <>
-    <Navbar username = {user.username} setUser = {setUser}/>
+    <>  
     <div className = "App">
+    <Navbar username = {user.username} setUser = {setUser}/>
       <Routes>
         <Route path = "/" element = {<Homepage/>}></Route>
         <Route path = "/weather" element = {<WeatherPage/>}></Route>

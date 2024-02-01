@@ -19,3 +19,20 @@
   font-size: x-large;
   padding: 50px;
 }
+
+.Back-button {
+  border-radius: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: black;
+    font-size: large;
+    border-color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+.Back-button:hover {
+  background-color: #333; 
+}

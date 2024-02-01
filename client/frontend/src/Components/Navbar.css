@@ -1,32 +1,50 @@
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-  }
-  
-  .navcontainer {
+.diary-links {
+    width: 600px;
+    height: 50px;
+    background-image: linear-gradient(135deg, #4ab8e4, #a19cbe);
+    border-radius: 10px;
+    font-size: medium;
+    margin:  auto 0;
+    margin-bottom: 3px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;   
+} 
+
+.profile-links {
+    background-image: linear-gradient(135deg, #4ab8e4, #a19cbe);
+    height: 50px;
+    width: 600px;
+    border-radius: 10px;
+    margin: auto 0;
     align-items: center;
-  }
-  
-  ul {
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  ul li {
-    cursor: pointer;
-  }
-  
-  ul li a {
-    color: white;
+    display: flex; 
+    justify-content: space-around;
+    flex-direction: row;
+    font-size: x-large;
+    /* flex-wrap: wrap; */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;   
+}
+
+.link1, .link2 {
     text-decoration: none;
-  }
-  
-  ul li a:hover {
-    text-decoration: underline;
-    color: #007bff;
-  }
-  
+    color: whitesmoke
+}
+
+.link1:hover {
+    color: #007bff68;
+}
+
+.link2:hover {
+    color: #007bff68;
+}
+
+header {
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+}

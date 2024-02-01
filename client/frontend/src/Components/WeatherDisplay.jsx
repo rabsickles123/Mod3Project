@@ -1,4 +1,4 @@
-import picture from "./Assets/weather-app.png"
+import picture from "./assets/weather-app.png"
 
 export default function WeatherDisplay({city, state, country, temperature, description, summary, high, low, feelslike, alert}) {
     return (

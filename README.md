@@ -6,7 +6,8 @@ This is my third and FINAL project for Per Scholas' software engineering trainin
 It utilizes the full MERN tech stack that I have learned in the past four months. 
 
 ## Deployed link
-
+- backend: https://weatherdiary-backend.onrender.com/
+- frontend: 
 
 ## Getting Started and Planning
 Link to Trello Board:

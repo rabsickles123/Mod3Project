@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken')
 function authorize(req, res, next) {
 
     try {
-        console.log('authorizing...')
+        // console.log('authorizing...')
 
         // 1. Check if the request has a token (in the Authorization header)
 
@@ -13,7 +13,7 @@ function authorize(req, res, next) {
             return res.status(400).json({ error: 'No token provided' })
         }
 
-        console.log(token) // "Bearer 9js83485jsh834"
+        // console.log(token) // "Bearer 9js83485jsh834"
 
         token = token.replace("Bearer ", "") // "9js83485jsh834"
 

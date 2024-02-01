@@ -15,7 +15,7 @@ export default function NewEntry() {
 
     const diary = { title, text }
 
-    console.log(diary)
+    // console.log(diary)
     const response = await fetch('/api/diary/', {
       method: 'POST',
       body: JSON.stringify(diary),
@@ -28,13 +28,11 @@ export default function NewEntry() {
     if (!response.ok) {
       setError(data.error)
     }
-    if (response.ok) {
-      
+    if (response.ok) {     
       setTitle('')
       setText('')
-      setError(null)
-      
-      console.log('diary entry added', data) 
+      setError(null)     
+      // console.log('diary entry added', data) 
       navigate('/diary')
     }
   };

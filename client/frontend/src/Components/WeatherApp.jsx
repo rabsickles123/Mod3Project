@@ -28,7 +28,7 @@ function WeatherApp() {
       try { 
           const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${key}`)
           const data = await response.json()
-          console.log(data)
+          // console.log(data)
           setState(data[0].state)
           setCountry(data[0].country)
           setLatitude(data[0].lat)

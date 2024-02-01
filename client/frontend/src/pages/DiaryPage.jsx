@@ -10,7 +10,7 @@ export default function DiaryEntries() {
         try {
           const response = await fetch('/api/diary');
           const data = await response.json();
-          console.log(data);
+          // console.log(data);
           setDiary(data)
         } catch (err) {
           console.log(err);

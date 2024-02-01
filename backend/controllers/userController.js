@@ -1,7 +1,7 @@
 const User = require('../models/userModel')
 
 async function show(req, res) {
-    console.log('GET /api/users')
+    // console.log('GET /api/users')
     try {
         const foundUser = await User.findById(req.id)
 

@@ -10,12 +10,12 @@ export default function DiaryEntryPage() {
 
     const [diary, setDiary] = useState({})
 
-    console.log(diary)
+    // console.log(diary)
     const getData = async () => {
         try {
           const response = await fetch(`/api/diary/${params.id}`);
           const data = await response.json();
-          console.log(data);
+          // console.log(data);
           setDiary(data)
         } catch (err) {
           console.log(err);

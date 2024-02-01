@@ -8,7 +8,7 @@ function generateToken(newUser) {
 }
 
 async function register(req, res) {
-    console.log('REGISTER /auth/register')
+    // console.log('REGISTER /auth/register')
     try {
         // 1. Check if the user exists 
 
@@ -22,21 +22,21 @@ async function register(req, res) {
 
         const encryptedPassword = await bcrypt.hash(req.body.password, 10)
 
-        console.log(encryptedPassword)
+        // console.log(encryptedPassword)
 
         // 3. Add new user to the database (with the encrypted password)
 
-        console.log({ ...req.body, password: encryptedPassword })
+        // console.log({ ...req.body, password: encryptedPassword })
 
         const newUser = await User.create({ ...req.body, password: encryptedPassword })
 
-        console.log(newUser)
+        // console.log(newUser)
 
         // 4. Generate a JWT token (the keys... permission slip... wrist band) and returning it to the user 
             
         const token = generateToken(newUser)
 
-        console.log(token)
+        // console.log(token)
 
         res.status(200).json({ token })
 
@@ -48,7 +48,7 @@ async function register(req, res) {
 }
 
 async function login(req, res) {
-    console.log('LOGIN /auth/login')
+    // console.log('LOGIN /auth/login')
     try {
         // 1. Check if user exists
 

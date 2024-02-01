@@ -32,7 +32,7 @@ export default function DiaryEntryEditPage() {
 
     const diary = { title, text }
 
-    console.log(diary)
+    // console.log(diary)
     const response = await fetch(`/api/diary/${id}`, {
       method: 'PUT',
       body: JSON.stringify(diary),
@@ -52,7 +52,7 @@ export default function DiaryEntryEditPage() {
       setText('')
       setError(null)
     
-      console.log('diary entry added', data)
+      // console.log('diary entry added', data)
       navigate('/diary')
     }
   };

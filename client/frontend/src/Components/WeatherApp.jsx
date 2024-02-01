@@ -45,7 +45,7 @@ function WeatherApp() {
       if (latitude && longitude) {
         const response = await fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&units=imperial&lang=en&appid=${key}`)
         const data = await response.json()
-        console.log(data)
+        // console.log(data)
         setTemperature(data.current.temp)
         setDescription(data.current.weather[0].description)
         setFeelslike(data.current.feels_like)

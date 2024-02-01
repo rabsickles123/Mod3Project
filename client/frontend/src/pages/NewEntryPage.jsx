@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./DiaryEntry.css"
 import { useNavigate } from "react-router-dom";
+import baseURL from "../Api";
 
 
 export default function NewEntry() {
@@ -17,7 +18,7 @@ export default function NewEntry() {
     const diary = { title, text }
 
     // console.log(diary)
-    const response = await fetch('/api/diary/', {
+    const response = await fetch(baseURL + '/api/diary/', {
       method: 'POST',
       body: JSON.stringify(diary),
       headers: {

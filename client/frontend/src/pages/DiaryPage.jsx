@@ -24,7 +24,7 @@ export default function DiaryEntries() {
 
       const handleDelete = async(id) => {
         try {
-            await fetch(`/api/diary/${id}` , {
+            await fetch(baseURL + `/api/diary/${id}` , {
                 method: 'DELETE'
             })
             setDiary(diary.filter((d) => d._id !==id))

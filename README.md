@@ -7,7 +7,7 @@ It utilizes the full MERN tech stack that I have learned in the past four months
 
 ## Deployed link
 - backend: https://weatherdiary-backend.onrender.com/
-- frontend: 
+- frontend: https://weatherdiary-frontend.onrender.com/
 
 ## Getting Started and Planning
 Link to Trello Board:

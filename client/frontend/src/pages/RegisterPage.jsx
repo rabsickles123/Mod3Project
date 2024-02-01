@@ -3,6 +3,7 @@ import "./RegisterPage.css"
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import baseURL from "../Api";
 
 let emptyForm = { 
     username: '',
@@ -24,7 +25,7 @@ export default function Register({ setUser }) {
         e.preventDefault()
         try {
 
-            const response = await axios.post('/auth/register', form)
+            const response = await axios.post(baseURL+'/auth/register', form)
             const token = response.data.token
 
             // console.log(token)
@@ -36,7 +37,7 @@ export default function Register({ setUser }) {
 
             localStorage.setItem("token", token)
 
-            const userResponse = await axios.get('/api/users', { 
+            const userResponse = await axios.get(baseURL+'/api/users', { 
                 headers: {
                     Authorization: token
                 }

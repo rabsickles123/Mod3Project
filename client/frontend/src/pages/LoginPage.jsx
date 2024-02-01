@@ -3,6 +3,7 @@ import "./LoginPage.css"
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import baseURL from '../Api';
 
 let emptyForm = { 
     username: '',
@@ -23,7 +24,7 @@ export default function Login({ setUser }) {
         e.preventDefault()
         try {
 
-            const response = await axios.post('/auth/login', form)
+            const response = await axios.post(baseURL+'/auth/login', form)
             const token = response.data.token
 
             // console.log(token)
@@ -35,7 +36,7 @@ export default function Login({ setUser }) {
 
             localStorage.setItem("token", token)
 
-            const userResponse = await axios.get('/api/users', { 
+            const userResponse = await axios.get(baseURL+'/api/users', { 
                 headers: {
                     Authorization: token
                 }

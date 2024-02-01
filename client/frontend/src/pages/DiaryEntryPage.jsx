@@ -1,6 +1,7 @@
 import DiaryDetails from "../Components/Diarydetails";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import baseURL from "../Api";
 // import "./Diarydetails.css";
 
 
@@ -13,7 +14,7 @@ export default function DiaryEntryPage() {
     // console.log(diary)
     const getData = async () => {
         try {
-          const response = await fetch(`/api/diary/${params.id}`);
+          const response = await fetch(baseURL +`/api/diary/${params.id}`);
           const data = await response.json();
           // console.log(data);
           setDiary(data)

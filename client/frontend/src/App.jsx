@@ -12,6 +12,7 @@ import Login from "./pages/LoginPage";
 import Profile from "./pages/ProfilePage";
 import Register from "./pages/RegisterPage";
 import DiaryEntryEditPage from './pages/DiaryEntryEditPage'
+import baseURL from './Api'
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
 
   async function getUser(token) {
       try {
-          const response = await axios.get('/api/users', {
+          const response = await axios.get(baseURL + '/api/users', {
               headers: {
                   Authorization: token
               }

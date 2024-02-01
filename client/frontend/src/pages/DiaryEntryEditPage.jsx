@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import baseURL from "../Api";
 
 export default function DiaryEntryEditPage() {
     const {id} = useParams()
@@ -12,7 +13,7 @@ export default function DiaryEntryEditPage() {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await fetch(`/api/diary/${id}`);
+            const response = await fetch(baseURL+`/api/diary/${id}`);
             const data = await response.json();
             
             
@@ -33,7 +34,7 @@ export default function DiaryEntryEditPage() {
     const diary = { title, text }
 
     // console.log(diary)
-    const response = await fetch(`/api/diary/${id}`, {
+    const response = await fetch(baseURL + `/api/diary/${id}`, {
       method: 'PUT',
       body: JSON.stringify(diary),
       headers: {
